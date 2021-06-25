@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/Login.vue";
@@ -12,9 +11,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Login,
-    children: [
-      
-    ]
+    children: [],
   },
   {
     path: "/main",
@@ -25,8 +22,7 @@ const routes = [
     path: "/Reservar",
     name: "Reserve",
     component: RoomReserve,
-  }
-  
+  },
 ];
 
 const router = new VueRouter({

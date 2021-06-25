@@ -267,32 +267,53 @@
           </div>
           <div class="infoAndPurchase col-6">
             <div class="card infos">
-                <p class="infoName">Nome do consultório - Sala 01</p>
-                <p class="infoComodities">Comodidades da sala incluídas</p>
-                <ul class="comoditiesSTYLE">
-                    <li><b-icon icon="check-circle" scale="1" variant="success"></b-icon> {{roomComodities[0]}}</li>
-                    <li><b-icon icon="check-circle" scale="1" variant="success"></b-icon> {{roomComodities[1]}}</li>
-                    <li><b-icon icon="check-circle" scale="1" variant="success"></b-icon> {{roomComodities[2]}}</li>
-                </ul>
+              <p class="infoName">Nome do consultório - Sala 01</p>
+              <p class="infoComodities">Comodidades da sala incluídas</p>
+              <ul class="comoditiesSTYLE">
+                <li>
+                  <b-icon
+                    icon="check-circle"
+                    scale="1"
+                    variant="success"
+                  ></b-icon>
+                  {{ roomComodities[0] }}
+                </li>
+                <li>
+                  <b-icon
+                    icon="check-circle"
+                    scale="1"
+                    variant="success"
+                  ></b-icon>
+                  {{ roomComodities[1] }}
+                </li>
+                <li>
+                  <b-icon
+                    icon="check-circle"
+                    scale="1"
+                    variant="success"
+                  ></b-icon>
+                  {{ roomComodities[2] }}
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-          <div class="fakeFooter">
-        <footer class="footerEl">
+    <div class="fakeFooter">
+      <footer class="footerEl">
         <hr class="footerLine" />
-          <div class="footerSyle copyrights">
-            <p>© 2021 Clina. Todos os direitos reservados</p>
-          </div>
-          <div class="footerSyle useTerms">
-            <p>Termos de uso</p>
-          </div>
-          <div class="footerSyle privacy">
-            <p>Políticas de privacidade</p>
-          </div>
-        </footer>
-      </div>
+        <div class="footerSyle copyrights">
+          <p>© 2021 Clina. Todos os direitos reservados</p>
+        </div>
+        <div class="footerSyle useTerms">
+          <p>Termos de uso</p>
+        </div>
+        <div class="footerSyle privacy">
+          <p>Políticas de privacidade</p>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -300,12 +321,12 @@
 export default {
   data() {
     return {
-        roomName: 1, //TODO receber o nome do quarto lá da main
+      roomName: 1, //TODO receber o nome do quarto lá da main
       selected: null,
       roomPrice: 80,
       recivedPeriod: "Noite", //TODO receber Valor vindo da main
       fields: ["dia", "periodos", "hours"],
-      roomComodities: ['Sofá/Divã', 'Lavatório/Pia', 'Impressora',], //TODO receber valor vindo do back end no created.
+      roomComodities: ["Sofá/Divã", "Lavatório/Pia", "Impressora"], //TODO receber valor vindo do back end no created.
       tempShedule: [
         {
           dia: 2,
@@ -499,7 +520,7 @@ export default {
   margin-left: 277px;
   width: 1366px;
   top: 85px;
-    border: none;
+  border: none;
   background-color: #fafafa;
   margin-bottom: 50px;
 }
@@ -547,57 +568,54 @@ export default {
   color: #4f4f4f;
 }
 .custom-Pgl {
-    
-font: normal normal normal 14px/28px Poppins;
-letter-spacing: 0px;
-color: #4F4F4F;
-opacity: 1;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #4f4f4f;
+  opacity: 1;
   margin-right: 5px;
   left: 4px;
   border-radius: 10px;
   width: 126px;
 }
 // room info and purshased style
-.comoditiesSTYLE{
-    list-style: none;
-    text-align: left;
-font: normal normal normal 14px/28px Poppins;
-letter-spacing: 0px;
-color: #4F4F4F;
+.comoditiesSTYLE {
+  list-style: none;
+  text-align: left;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #4f4f4f;
 }
-.infoAndPurchase{
-    width: 400px;
-    position: relative;
-    top: 50px;
-    left: 35px;
-    border-radius: 20px;
+.infoAndPurchase {
+  width: 400px;
+  position: relative;
+  top: 50px;
+  left: 35px;
+  border-radius: 20px;
 }
-.infoName{
-    position: relative;
-    top: 10px;
-    left: 10px;
-    text-align: left;
-font: normal normal normal 16px/28px Poppins;
-letter-spacing: 0px;
-color: #4F4F4F;
+.infoName {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  font: normal normal normal 16px/28px Poppins;
+  letter-spacing: 0px;
+  color: #4f4f4f;
 }
-.infoComodities{
-    position: relative;
-    left: 10px;
-    
-font: normal normal 600 16px/28px Poppins;
-letter-spacing: 0px;
-color: #4F4F4F;
+.infoComodities {
+  position: relative;
+  left: 10px;
 
+  font: normal normal 600 16px/28px Poppins;
+  letter-spacing: 0px;
+  color: #4f4f4f;
 }
 //forter styles
 .footerEl {
- position: relative;
-    top: 50px;
+  position: relative;
+  top: 50px;
 }
 
 .footerSyle {
-   
   display: inline-block;
 }
 .copyrights {
@@ -620,5 +638,4 @@ color: #4F4F4F;
   color: #898989;
   opacity: 1;
 }
-
 </style>

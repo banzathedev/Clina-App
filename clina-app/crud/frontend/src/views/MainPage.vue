@@ -104,10 +104,12 @@
               </div>
               <div class="roomPrice col-3">
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency">R$ {{}} /h</p>
+                <p class="currency">R$ {{roomInfos[0].price}} /h</p>
               </div>
               <div class="roomButtom col-3">
-                <button class="btnProduct" @click.stop="pushRoomId(1)"><span>Reservar</span></button>
+                <button class="btnProduct" @click.stop="pushRoomId(1)">
+                  <span>Reservar</span>
+                </button>
               </div>
             </div>
           </b-card>
@@ -129,7 +131,7 @@
               </div>
               <div class="roomPrice col-3">
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency">R$ {{}} /h</p>
+                <p class="currency">R$ {{roomInfos[1].price}} /h</p>
               </div>
               <div class="roomButtom col-3">
                 <button class="btnProduct"><span>Reservar</span></button>
@@ -152,9 +154,9 @@
                   </b-card-text>
                 </div>
               </div>
-              <div class="roomPrice col-3">
+              <div class="roomPrice col-3" >
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency">R$ {{}} /h</p>
+                <p class="currency" >R$ {{roomInfos[2].price}} /h</p>
               </div>
               <div class="roomButtom col-3">
                 <button class="btnProduct"><span>Reservar</span></button>
@@ -205,10 +207,12 @@
         </footer>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters} from "vuex";
 export default {
   data() {
     return {
@@ -221,17 +225,39 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['getShedule', 'getRooms']),
     pushRoomId(payload) {
-      const selectedRoom = payload
-      this.roomId = selectedRoom
-      this.goToReserve()
+      const selectedRoom = payload;
+      this.roomId = selectedRoom;
+      this.getShedule()
+      this.goToReserve();
     },
-  goToReserve() {
-    console.log(this.roomId) //fazer a chamada para dispatch no Vuex
-    this.$router.push('/Reservar')
-    this.roomId = null
-  }
+    goToReserve() {
+      console.log(this.roomId); //fazer a chamada para dispatch no Vuex
+      this.$router.push("/Reservar");
+      this.roomId = null;
+    },
+    // rr(){
+    //   let chegouRooms = this.$store.getters.passRooms
+    //   return this.cc(chegouRooms)
+    // }
   },
+  
+  computed: {
+    ...mapGetters({ roominfosArrival: 'passRooms'}),
+   roomInfos(){
+     return this.roominfosArrival
+   }
+    
+  },
+  created() {
+    this.getRooms()
+    // setTimeout(() => {
+    //   this.rr()
+    
+
+    // }, 2000)
+  }
 };
 </script>
 
