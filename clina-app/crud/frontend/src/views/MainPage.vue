@@ -87,31 +87,122 @@
     <div class="products-display">
       <div>
         <b-card-group columns>
-          <b-card
-            img-src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:a601c197-0a04-4832-a53f-f7db72599c83;revision=0?component_id=f944001e-d91d-4734-9e40-725b0d263500&api_key=CometServer1&access_token=1624586709_urn%3Aaaid%3Asc%3AUS%3Aa601c197-0a04-4832-a53f-f7db72599c83%3Bpublic_89582edb0e4f7a6091771238c9605e175d8ba5dc"
-            img-alt="Image"
-            img-left
-            class="product mb-4"
-          >
-            <b-card-text> </b-card-text>
+          <b-card class="product mb-4">
+            <div class="row">
+              <div name="roomInfos" class="col-6">
+                <div class="row">
+                  <img
+                    src="../assets/img/Retângulo 2692.png"
+                    alt="Imagem Consultorio 01"
+                    class="roomPhoto col-6"
+                  />
+                  <b-card-text class="col-6">
+                    <h1 class="roomName">Nome do consultório - Sala 01</h1>
+                    <h2 class="roomLocation">Em Bela Vista, SP.</h2>
+                  </b-card-text>
+                </div>
+              </div>
+              <div class="roomPrice col-3">
+                <p class="priceInfo1">A partir de</p>
+                <p class="currency">R$ {{}} /h</p>
+              </div>
+              <div class="roomButtom col-3">
+                <button class="btnProduct"><span>Reservar</span></button>
+              </div>
+            </div>
           </b-card>
 
-          <b-card
-            img-src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:a601c197-0a04-4832-a53f-f7db72599c83;revision=0?component_id=80810b2e-2359-4c0a-a1bf-0679814d17de&api_key=CometServer1&access_token=1624586709_urn%3Aaaid%3Asc%3AUS%3Aa601c197-0a04-4832-a53f-f7db72599c83%3Bpublic_89582edb0e4f7a6091771238c9605e175d8ba5dc"
-            img-alt="Image"
-            img-left
-            class="product mb-4"
-          >
+          <b-card class="product mb-4">
+            <div class="row">
+              <div name="roomInfos" class="col-6">
+                <div class="row">
+                  <img
+                    src="../assets/img/Retângulo 2692-1.png"
+                    alt="Imagem Consultorio 01"
+                    class="roomPhoto col-6"
+                  />
+                  <b-card-text class="col-6">
+                    <h1 class="roomName">Nome do consultório - Sala 02</h1>
+                    <h2 class="roomLocation">Em Bela Vista, SP.</h2>
+                  </b-card-text>
+                </div>
+              </div>
+              <div class="roomPrice col-3">
+                <p class="priceInfo1">A partir de</p>
+                <p class="currency">R$ {{}} /h</p>
+              </div>
+              <div class="roomButtom col-3">
+                <button class="btnProduct"><span>Reservar</span></button>
+              </div>
+            </div>
           </b-card>
 
-          <b-card
-            img-src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:a601c197-0a04-4832-a53f-f7db72599c83;revision=0?component_id=f944001e-d91d-4734-9e40-725b0d263500&api_key=CometServer1&access_token=1624586709_urn%3Aaaid%3Asc%3AUS%3Aa601c197-0a04-4832-a53f-f7db72599c83%3Bpublic_89582edb0e4f7a6091771238c9605e175d8ba5dc"
-            img-alt="Image"
-            img-left
-            class="product mb-4"
-          >
+          <b-card class="product mb-4">
+            <div class="row">
+              <div name="roomInfos" class="col-6">
+                <div class="row">
+                  <img
+                    src="../assets/img/Retângulo 2692.png"
+                    alt="Imagem Consultorio 01"
+                    class="roomPhoto col-6"
+                  />
+                  <b-card-text class="col-6">
+                    <h1 class="roomName">Nome do consultório - Sala 03</h1>
+                    <h2 class="roomLocation">Em Bela Vista, SP.</h2>
+                  </b-card-text>
+                </div>
+              </div>
+              <div class="roomPrice col-3">
+                <p class="priceInfo1">A partir de</p>
+                <p class="currency">R$ {{}} /h</p>
+              </div>
+              <div class="roomButtom col-3">
+                <button class="btnProduct"><span>Reservar</span></button>
+              </div>
+            </div>
           </b-card>
         </b-card-group>
+      </div>
+    </div>
+    <div class="Paginatio bt">
+      <nav aria-label="Pagination">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link linkSyle" href="#" aria-label="Anterior">
+              <span aria-hidden="true">&laquo; </span>
+              <span class="sr-only">Anterior</span>
+            </a>
+          </li>
+          <li class="page-item linkSyle">
+            <a class="page-link linkSyle" href="#">1</a>
+          </li>
+          <li class="page-item linkSyle">
+            <a class="page-link linkSyle" href="#">2</a>
+          </li>
+          <li class="page-item linkSyle">
+            <a class="page-link linkSyle" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link linkSyle" href="#" aria-label="Próximo">
+              <span class="sr-only">Próximo</span>
+              <span aria-hidden="true"> &raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="fakeFooter">
+        <hr class="footerLine" />
+        <footer class="footerEl">
+          <div class="footerSyle copyrights">
+            <p>© 2021 Clina. Todos os direitos reservados</p>
+          </div>
+          <div class="footerSyle useTerms">
+            <p>Termos de uso</p>
+          </div>
+          <div class="footerSyle privacy">
+            <p>Políticas de privacidade</p>
+          </div>
+        </footer>
       </div>
     </div>
   </div>
@@ -187,7 +278,6 @@ export default {
   height: 5px;
 }
 .sheetModal {
-  
   width: 1366px;
   margin-left: 277px;
   height: 250px;
@@ -249,8 +339,94 @@ export default {
 }
 //card display rooms.
 
-.product{
+.product {
   margin-left: 277px;
   width: 1366px;
+}
+.roomName {
+  margin-top: 60px;
+  width: 400px;
+  font: normal normal 600 24px/28px Poppins;
+  letter-spacing: 0px;
+  color: #111111;
+  opacity: 1;
+}
+.roomLocation {
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #898989;
+  opacity: 1;
+}
+.priceInfo1 {
+  position: relative;
+  left: 180px;
+  top: 45px;
+  font: normal normal normal 14px/20px Poppins;
+  letter-spacing: 0px;
+  color: #898989;
+  opacity: 1;
+}
+.currency {
+  position: relative;
+  left: 160px;
+  top: 60px;
+  font: normal normal 600 24px/28px Poppins;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.btnProduct {
+  position: relative;
+  top: 80px;
+  left: 10px;
+  width: 250px;
+  height: 44px;
+  background: #7a35ff;
+  box-shadow: none;
+  border-radius: 4px;
+  border-block-style: none;
+  opacity: 1;
+  font: normal normal bold 16px/26px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.roomPhoto {
+  height: 218px;
+  width: 272px;
+}
+
+//pagination style
+.linkSyle {
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #7a35ff;
+  
+}
+//footer style
+.footerSyle {
+  display: inline-block;
+}
+.copyrights{
+    margin-right: 755px;
+    margin-left: 277px;
+    font: normal normal normal 14px/28px Poppins;
+letter-spacing: 0px;
+color: #898989;
+
+}
+.useTerms{
+margin-right: 30px;
+font: normal normal normal 14px/28px Poppins;
+letter-spacing: 0px;
+color: #898989;
+
+}
+.privacy{
+margin-right: 273px;
+font: normal normal normal 14px/28px Poppins;
+letter-spacing: 0px;
+color: #898989;
+opacity: 1;
 }
 </style>
