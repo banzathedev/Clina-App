@@ -3,6 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/Login.vue";
 import Main from "../views/MainPage.vue";
+import RoomReserve from "../views/RoomReserves.vue";
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const routes = [
     path: "/main",
     name: "Main",
     component: Main,
+  },
+  {
+    path: "/Reservar",
+    name: "Reserve",
+    component: RoomReserve,
   }
   
 ];

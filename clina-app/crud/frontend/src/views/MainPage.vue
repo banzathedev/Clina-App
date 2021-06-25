@@ -107,7 +107,7 @@
                 <p class="currency">R$ {{}} /h</p>
               </div>
               <div class="roomButtom col-3">
-                <button class="btnProduct"><span>Reservar</span></button>
+                <button class="btnProduct" @click.stop="pushRoomId(1)"><span>Reservar</span></button>
               </div>
             </div>
           </b-card>
@@ -164,7 +164,7 @@
         </b-card-group>
       </div>
     </div>
-    <div class="Paginatio bt">
+    <div class="Pagination bt">
       <nav aria-label="Pagination">
         <ul class="pagination justify-content-center">
           <li class="page-item">
@@ -212,12 +212,25 @@
 export default {
   data() {
     return {
+      roomId: null,
       selected: null,
       options: [
         { value: "A", text: "Option A (from options prop)" },
         { value: "B", text: "Option B (from options prop)" },
       ],
     };
+  },
+  methods: {
+    pushRoomId(payload) {
+      const selectedRoom = payload
+      this.roomId = selectedRoom
+      this.goToReserve()
+    },
+  goToReserve() {
+    console.log(this.roomId) //fazer a chamada para dispatch no Vuex
+    this.$router.push('/Reservar')
+    this.roomId = null
+  }
   },
 };
 </script>
@@ -401,32 +414,29 @@ export default {
   font: normal normal normal 14px/28px Poppins;
   letter-spacing: 0px;
   color: #7a35ff;
-  
 }
 //footer style
 .footerSyle {
   display: inline-block;
 }
-.copyrights{
-    margin-right: 755px;
-    margin-left: 277px;
-    font: normal normal normal 14px/28px Poppins;
-letter-spacing: 0px;
-color: #898989;
-
+.copyrights {
+  margin-right: 755px;
+  margin-left: 277px;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #898989;
 }
-.useTerms{
-margin-right: 30px;
-font: normal normal normal 14px/28px Poppins;
-letter-spacing: 0px;
-color: #898989;
-
+.useTerms {
+  margin-right: 30px;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #898989;
 }
-.privacy{
-margin-right: 273px;
-font: normal normal normal 14px/28px Poppins;
-letter-spacing: 0px;
-color: #898989;
-opacity: 1;
+.privacy {
+  margin-right: 273px;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #898989;
+  opacity: 1;
 }
 </style>
