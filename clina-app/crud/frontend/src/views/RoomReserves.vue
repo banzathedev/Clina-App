@@ -82,7 +82,8 @@
               <div class="dayshow1">
                 <p>
                   <span class="dayStyle">0{{ roomShedule[0].dia }}</span
-                  ><span class="monthStyle"> março</span>
+                  ><span class="monthStyle"> Junho </span>
+                  <!-- TODO interpolar o valor do mes, vindo do backend -->
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
@@ -91,14 +92,18 @@
                   }}</span>
                 </p>
                 <div>
-                  <ul class="pagination">
+                  <ul class="pagination" @click.stop="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[0].periodos[0].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[0].periodos[0].hours[1] }}
                       </a>
                     </li>
@@ -108,7 +113,7 @@
               <div class="dayshow2">
                 <p>
                   <span class="dayStyle">0{{ roomShedule[1].dia }}</span
-                  ><span class="monthStyle"> março</span>
+                  ><span class="monthStyle"> Junho </span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
@@ -117,24 +122,32 @@
                   }}</span>
                 </p>
                 <div class="onePeriod">
-                  <ul class="pagination">
+                  <ul class="pagination" @click="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[0].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[0].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[0].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[0].hours[3] }}
                       </a>
                     </li>
@@ -146,25 +159,33 @@
                     roomShedule[1].periodos[1].p
                   }}</span>
                 </p>
-                <div class="onePeriod">
-                  <ul class="pagination">
+                <div class="secondPeriod">
+                  <ul class="pagination" @click="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[1].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[1].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[1].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[1].hours[3] }}
                       </a>
                     </li>
@@ -176,25 +197,31 @@
                     roomShedule[1].periodos[2].p
                   }}</span>
                 </p>
-                <div class="onePeriod">
-                  <ul class="pagination">
+                <div class="thirdPeriod">
+                  <ul class="pagination" @click="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a class="page-link custom-Pgl"
                         >{{ roomShedule[1].periodos[2].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[2].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[2].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[1].periodos[2].hours[3] }}
                       </a>
                     </li>
@@ -204,7 +231,7 @@
               <div class="dayshow3">
                 <p>
                   <span class="dayStyle">0{{ roomShedule[2].dia }}</span
-                  ><span class="monthStyle"> março</span>
+                  ><span class="monthStyle"> Junho </span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
@@ -213,14 +240,18 @@
                   }}</span>
                 </p>
                 <div>
-                  <ul class="pagination">
+                  <ul class="pagination" @click="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[2].periodos[1].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[2].periodos[1].hours[1] }}
                       </a>
                     </li>
@@ -230,7 +261,7 @@
               <div class="dayshow4">
                 <p>
                   <span class="dayStyle">0{{ roomShedule[3].dia }}</span
-                  ><span class="monthStyle"> março</span>
+                  ><span class="monthStyle"> Junho </span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
@@ -239,24 +270,32 @@
                   }}</span>
                 </p>
                 <div>
-                  <ul class="pagination">
+                  <ul class="pagination" @click="conditional = true">
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[3].periodos[2].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[3].periodos[2].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[3].periodos[2].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
-                      <a href="" class="page-link custom-Pgl"
+                      <a
+                        class="page-link custom-Pgl"
+                        @click.prevent="totalValueMath"
                         >{{ roomShedule[3].periodos[2].hours[3] }}
                       </a>
                     </li>
@@ -267,34 +306,47 @@
           </div>
           <div class="infoAndPurchase col-6">
             <div class="card infos">
-              <p class="infoName">Nome do consultório - Sala 01</p>
-              <p class="infoComodities">Comodidades da sala incluídas</p>
-              <ul class="comoditiesSTYLE">
-                <li>
-                  <b-icon
-                    icon="check-circle"
-                    scale="1"
-                    variant="success"
-                  ></b-icon>
-                  {{ roomComodities[0] }}
-                </li>
-                <li>
-                  <b-icon
-                    icon="check-circle"
-                    scale="1"
-                    variant="success"
-                  ></b-icon>
-                  {{ roomComodities[1] }}
-                </li>
-                <li>
-                  <b-icon
-                    icon="check-circle"
-                    scale="1"
-                    variant="success"
-                  ></b-icon>
-                  {{ roomComodities[2] }}
-                </li>
-              </ul>
+              <div class="conditionedToTheClick" v-if="conditional">
+                <p class="totalPrice">
+                  <span>Valor Total</span>
+                  <span>R$ {{ roomPrice }} /h</span>
+                </p>
+              </div>
+              <div class="enabledAllTheTime">
+                <p class="infoName">Nome do consultório - Sala 01</p>
+                <p class="infoComodities">Comodidades da sala incluídas</p>
+                <ul class="comoditiesSTYLE">
+                  <li>
+                    <b-icon
+                      icon="check-circle"
+                      scale="1"
+                      variant="success"
+                    ></b-icon>
+                    {{ roomInfos[0].roomComodities[0] }}
+                  </li>
+                  <li>
+                    <b-icon
+                      icon="check-circle"
+                      scale="1"
+                      variant="success"
+                    ></b-icon>
+                    {{ roomInfos[0].roomComodities[1] }}
+                  </li>
+                  <li>
+                    <b-icon
+                      icon="check-circle"
+                      scale="1"
+                      variant="success"
+                    ></b-icon>
+                    {{ roomInfos[0].roomComodities[2] }}
+                  </li>
+                </ul>
+              </div>
+              <div class="conditionedToTheClick" v-if="conditional">
+                <button class="btnFinal">
+                  <span>Finalizar reserva</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -320,40 +372,46 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 export default {
-
   data() {
     return {
-      roomName: 1, //TODO receber o nome do quarto lá da main
+      conditional: false,
       selected: null,
-      roomPrice: 80,
+      roomPrice: 0,
       recivedPeriod: "Todos", //TODO receber Valor vindo da main
-      roomComodities: ["Sofá/Divã", "Lavatório/Pia", "Impressora"], //TODO receber valor vindo do back end no created.
-      
     };
   },
   methods: {
-    ...mapActions(['getShedule', 'getRooms']),
+    ...mapActions(["getShedule", "getRooms"]),
+    totalValueMath() {
+      let priceInit = this.roomInfos[0].price;
+      let roomPriceInit = this.roomPrice;
+      let roomPriceFinal = priceInit + roomPriceInit;
+      return (this.roomPrice = roomPriceFinal);
+    },
   },
   computed: {
-    ...mapGetters({ roominfosArrival: 'passRooms', roomSheduleArrival: 'passShedule'}),
-   roomInfos(){
-     return this.roominfosArrival
-   },
+    ...mapGetters({
+      roominfosArrival: "passRooms",
+      roomSheduleArrival: "passShedule",
+    }),
+    roomInfos() {
+      return this.roominfosArrival;
+    },
     roomShedule() {
-      return this.roomSheduleArrival
-    }
+      return this.roomSheduleArrival;
+    },
   },
   created() {
-    this.getShedule()
-    
-  }
+    this.getShedule();
+    this.getRooms();
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .fake-nav {
   //header style
-  //TODO put all headstyles in on sccs archive
+  //TODO put all styles in separated sccs archive
   margin-left: 277px;
   width: 1366px;
   border: none;
@@ -531,6 +589,8 @@ export default {
 }
 // room info and purshased style
 .comoditiesSTYLE {
+  position: relative;
+  left: 20px;
   list-style: none;
   text-align: left;
   font: normal normal normal 14px/28px Poppins;
@@ -547,7 +607,7 @@ export default {
 .infoName {
   position: relative;
   top: 10px;
-  left: 10px;
+  left: 20px;
   text-align: left;
   font: normal normal normal 16px/28px Poppins;
   letter-spacing: 0px;
@@ -555,11 +615,37 @@ export default {
 }
 .infoComodities {
   position: relative;
-  left: 10px;
+  left: 20px;
 
   font: normal normal 600 16px/28px Poppins;
   letter-spacing: 0px;
   color: #4f4f4f;
+}
+//conditional parts
+.totalPrice {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font: normal normal 600 20px/28px Poppins;
+  letter-spacing: 0px;
+  color: #111111;
+}
+
+.btnFinal {
+  position: relative;
+  margin: 15px;
+  width: 320px;
+  height: 44px;
+  left: 10px;
+  background: #7a35ff;
+  box-shadow: none;
+  border-radius: 4px;
+  border-block-style: none;
+  opacity: 1;
+  font: normal normal bold 16px/26px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
 //forter styles
 .footerEl {

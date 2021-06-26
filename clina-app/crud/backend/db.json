@@ -31,7 +31,7 @@
         }
     ],
     "room": [
-        {"name": "Sala 01", "price": 80, "id": 1},
+        {"name": "Sala 01", "price": 80, "id": 1, "roomComodities": ["Sofá/Divã", "Lavatório/Pia", "Impressora"]},
         {"name": "Sala 02", "price": 85, "id": 2},
         {"name": "Sala 03", "price": 86, "id": 3}
     ]
