@@ -60,9 +60,8 @@ export default {
       this.loginAuth((this.loginData));
       console.log('foi chamado')
       setTimeout(() =>{
-        console.log('roteamento para main chamdo')
         this.$router.push("main");
-      }, 1500)
+      }, 150)
       
     },
   },

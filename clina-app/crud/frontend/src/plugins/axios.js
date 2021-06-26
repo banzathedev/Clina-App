@@ -17,7 +17,6 @@ Vue.use({
      Vue.prototype.$http.interceptors.request.use(
         async (config) => {
           config.headers.Authorization = ` Bearer ${token}`
-          console.log(localStorage)
           return config;
         }
       ); 
