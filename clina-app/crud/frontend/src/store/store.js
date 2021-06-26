@@ -3,9 +3,13 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+
+
+
 export default new Vuex.Store({
-  state: {
   
+  state: {
+    token: '',
     schedule: {},
     room: {},
   },
@@ -25,11 +29,20 @@ export default new Vuex.Store({
       state.room = payload
       console.log('room setado', state.room)
 
+    },
+    setToken(state, payload) {
+      console.log('token chegou dessa maneira para setagem', payload)
+      
+      let token = payload
+      state.token = token
+          console.log(localStorage)
+      localStorage['tokenv2'] = state.token
+      console.log('token setado no cache local ')
     }
   },
   actions: {
     getShedule({ commit }) {
-      Vue.prototype.$http('schedule')
+      Vue.prototype.$http('schedule',)
         .then(resp => {
           let dataschedule = resp.data
           console.log('data chegou na action', dataschedule);
@@ -43,6 +56,14 @@ export default new Vuex.Store({
           console.log('data room chegou na action', dataRoom)
           commit('setRoom', dataRoom)
         })
+    },
+    loginAuth({commit }, dadosLogin){
+      Vue.prototype.$http.post('http://localhost:8000/auth/login', dadosLogin) 
+        .then(resp =>{
+          let token = resp.data.access_token
+          console.log('token chegou dessa maneira', token)
+          commit('setToken', token)
+        })
     }
   },
   getters: {
@@ -53,8 +74,13 @@ export default new Vuex.Store({
 
     passShedule(state) {
       return state.schedule
+    },
+    passToken: state => {
+      console.log('pass token acionado')
+      return state.token
     }
   },
+    
   modules: {},
 });
 

@@ -16,9 +16,14 @@
             class="form-control email"
             id="1"
             placeholder="name@example.com"
+            v-model="loginData.email"
           />
           <p class="loginPassword">Senha</p>
-          <input type="password" class="form-control password" id="2" />
+          <input 
+              type="password" 
+              class="form-control password" 
+              id="2"
+              v-model="loginData.password"/>
           <button class="btnEnter" @click="goToMain">
             <span>Entrar</span>
           </button>
@@ -37,19 +42,28 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Main",
   data() {
     return {
       loginData: {
         email: "",
-        senha: "",
+        password: "",
       },
     };
   },
   methods: {
+    ...mapActions(["loginAuth"]),
+
     goToMain() {
-      this.$router.push("main");
+      this.loginAuth((this.loginData));
+      console.log('foi chamado')
+      setTimeout(() =>{
+        console.log('roteamento para main chamdo')
+        this.$router.push("main");
+      }, 1500)
+      
     },
   },
 };
