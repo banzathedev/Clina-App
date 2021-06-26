@@ -5,8 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    SelectedroomShedule: [],
-    Selectedroominfo: [],
+  
     schedule: {},
     room: {},
   },

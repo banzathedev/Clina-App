@@ -81,25 +81,25 @@
             <div class="card calendars">
               <div class="dayshow1">
                 <p>
-                  <span class="dayStyle">0{{ tempShedule[0].dia }}</span
+                  <span class="dayStyle">0{{ roomShedule[0].dia }}</span
                   ><span class="monthStyle"> março</span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[0].periodos[0].p
+                    roomShedule[0].periodos[0].p
                   }}</span>
                 </p>
                 <div>
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[0].periodos[0].manh[0] }}
+                        >{{ roomShedule[0].periodos[0].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[0].periodos[0].manh[0] }}
+                        >{{ roomShedule[0].periodos[0].hours[1] }}
                       </a>
                     </li>
                   </ul>
@@ -107,35 +107,35 @@
               </div>
               <div class="dayshow2">
                 <p>
-                  <span class="dayStyle">0{{ tempShedule[1].dia }}</span
+                  <span class="dayStyle">0{{ roomShedule[1].dia }}</span
                   ><span class="monthStyle"> março</span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[1].periodos[0].p
+                    roomShedule[1].periodos[0].p
                   }}</span>
                 </p>
                 <div class="onePeriod">
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[0].manh[0] }}
+                        >{{ roomShedule[1].periodos[0].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[0].manh[1] }}
+                        >{{ roomShedule[1].periodos[0].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[0].manh[2] }}
+                        >{{ roomShedule[1].periodos[0].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[0].manh[3] }}
+                        >{{ roomShedule[1].periodos[0].hours[3] }}
                       </a>
                     </li>
                   </ul>
@@ -143,29 +143,29 @@
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[1].periodos[1].p
+                    roomShedule[1].periodos[1].p
                   }}</span>
                 </p>
                 <div class="onePeriod">
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[1].tarde[0] }}
+                        >{{ roomShedule[1].periodos[1].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[1].tarde[1] }}
+                        >{{ roomShedule[1].periodos[1].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[1].tarde[2] }}
+                        >{{ roomShedule[1].periodos[1].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[1].tarde[3] }}
+                        >{{ roomShedule[1].periodos[1].hours[3] }}
                       </a>
                     </li>
                   </ul>
@@ -173,29 +173,29 @@
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[1].periodos[2].p
+                    roomShedule[1].periodos[2].p
                   }}</span>
                 </p>
                 <div class="onePeriod">
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[2].noite[0] }}
+                        >{{ roomShedule[1].periodos[2].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[2].noite[1] }}
+                        >{{ roomShedule[1].periodos[2].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[2].noite[2] }}
+                        >{{ roomShedule[1].periodos[2].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[1].periodos[2].noite[3] }}
+                        >{{ roomShedule[1].periodos[2].hours[3] }}
                       </a>
                     </li>
                   </ul>
@@ -203,25 +203,25 @@
               </div>
               <div class="dayshow3">
                 <p>
-                  <span class="dayStyle">0{{ tempShedule[2].dia }}</span
+                  <span class="dayStyle">0{{ roomShedule[2].dia }}</span
                   ><span class="monthStyle"> março</span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[2].periodos[1].p
+                    roomShedule[2].periodos[1].p
                   }}</span>
                 </p>
                 <div>
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[2].periodos[1].tarde[0] }}
+                        >{{ roomShedule[2].periodos[1].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[2].periodos[1].tarde[1] }}
+                        >{{ roomShedule[2].periodos[1].hours[1] }}
                       </a>
                     </li>
                   </ul>
@@ -229,35 +229,35 @@
               </div>
               <div class="dayshow4">
                 <p>
-                  <span class="dayStyle">0{{ tempShedule[3].dia }}</span
+                  <span class="dayStyle">0{{ roomShedule[3].dia }}</span
                   ><span class="monthStyle"> março</span>
                 </p>
                 <p class="inPeriod">
                   No preriodo da -
                   <span class="thePeriod">{{
-                    tempShedule[3].periodos[2].p
+                    roomShedule[3].periodos[2].p
                   }}</span>
                 </p>
                 <div>
                   <ul class="pagination">
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[3].periodos[2].noite[0] }}
+                        >{{ roomShedule[3].periodos[2].hours[0] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[3].periodos[2].noite[1] }}
+                        >{{ roomShedule[3].periodos[2].hours[1] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[3].periodos[2].noite[2] }}
+                        >{{ roomShedule[3].periodos[2].hours[2] }}
                       </a>
                     </li>
                     <li class="page-item">
                       <a href="" class="page-link custom-Pgl"
-                        >{{ tempShedule[3].periodos[2].noite[3] }}
+                        >{{ roomShedule[3].periodos[2].hours[3] }}
                       </a>
                     </li>
                   </ul>
@@ -318,83 +318,35 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
+
   data() {
     return {
       roomName: 1, //TODO receber o nome do quarto lá da main
       selected: null,
       roomPrice: 80,
-      recivedPeriod: "Noite", //TODO receber Valor vindo da main
-      fields: ["dia", "periodos", "hours"],
+      recivedPeriod: "Todos", //TODO receber Valor vindo da main
       roomComodities: ["Sofá/Divã", "Lavatório/Pia", "Impressora"], //TODO receber valor vindo do back end no created.
-      tempShedule: [
-        {
-          dia: 2,
-          periodos: [
-            { p: "manhã", manh: ["10:00 as 11:00", "11:00 as 12:00"] },
-            { p: "tarde", tarde: ["14:00 as 15:00", "17:00 as 18:00"] },
-            { p: "noite", noite: [] },
-          ],
-        },
-        {
-          dia: 3,
-          periodos: [
-            {
-              p: "manhã",
-              manh: [
-                "8:00 as 9:00",
-                "9:00 as 10:00",
-                "10:00 as 11:00",
-                "11:00 as 12:00",
-              ],
-            },
-            {
-              p: "tarde",
-              tarde: [
-                "14:00 as 15:00",
-                "15:00 as 16:00",
-                "16:00 as 17:00",
-                "17:00 as 18:00",
-              ],
-            },
-            {
-              p: "noite",
-              noite: [
-                "18:00 as 19:00",
-                "19:00 as 20:00",
-                "20:00 as 21:00",
-                "21:00 as 22:00",
-              ],
-            },
-          ],
-        },
-        {
-          dia: 4,
-          periodos: [
-            { p: "manhã", manh: [] },
-            { p: "tarde", tarde: ["14:00 as 15:00", "17:00 as 18:00"] },
-            { p: "noite", noite: [] },
-          ],
-        },
-        {
-          dia: 5,
-          periodos: [
-            { p: "manhã", manh: [] },
-            { p: "tarde", tarde: [] },
-            {
-              p: "noite",
-              noite: [
-                "18:00 as 19:00",
-                "19:00 as 20:00",
-                "20:00 as 21:00",
-                "21:00 as 22:00",
-              ],
-            },
-          ],
-        },
-      ],
+      
     };
   },
+  methods: {
+    ...mapActions(['getShedule', 'getRooms']),
+  },
+  computed: {
+    ...mapGetters({ roominfosArrival: 'passRooms', roomSheduleArrival: 'passShedule'}),
+   roomInfos(){
+     return this.roominfosArrival
+   },
+    roomShedule() {
+      return this.roomSheduleArrival
+    }
+  },
+  created() {
+    this.getShedule()
+    
+  }
 };
 </script>
 

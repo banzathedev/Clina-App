@@ -59,14 +59,14 @@
             </b-form-group>
           </div>
           <div class="col-md-6">
-            <b-form-group class="period" label="Período">
+            <b-form-group class="period" label="Período do dia">
               <b-form-select
                 class="form-control form-control-sm"
                 v-model="selected"
               >
                 <template>
                   <b-form-select-option :value="null" disabled
-                    >-- Please select an option --</b-form-select-option
+                    >-- Por favor selecione um --</b-form-select-option
                   >
                 </template>
                 <b-form-select-option value="morning"
