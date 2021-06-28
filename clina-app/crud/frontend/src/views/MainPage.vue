@@ -31,9 +31,9 @@
         </a>
 
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item">Caio</a></li>
+          <li><a class="dropdown-item">Mudar Senha</a></li>
+          <li><a class="dropdown-item" @mousedown="killSession">Sair</a></li>
         </ul>
       </div>
     </div>
@@ -104,7 +104,7 @@
               </div>
               <div class="roomPrice col-3">
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency">R$ {{roomInfos[0].price}} /h</p>
+                <p class="currency">R$ {{ roomInfos[0].price }} /h</p>
               </div>
               <div class="roomButtom col-3">
                 <button class="btnProduct" @click.stop="pushRoomId(1)">
@@ -131,7 +131,7 @@
               </div>
               <div class="roomPrice col-3">
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency">R$ {{roomInfos[1].price}} /h</p>
+                <p class="currency">R$ {{ roomInfos[1].price }} /h</p>
               </div>
               <div class="roomButtom col-3">
                 <button class="btnProduct"><span>Reservar</span></button>
@@ -154,9 +154,9 @@
                   </b-card-text>
                 </div>
               </div>
-              <div class="roomPrice col-3" >
+              <div class="roomPrice col-3">
                 <p class="priceInfo1">A partir de</p>
-                <p class="currency" >R$ {{roomInfos[2].price}} /h</p>
+                <p class="currency">R$ {{ roomInfos[2].price }} /h</p>
               </div>
               <div class="roomButtom col-3">
                 <button class="btnProduct"><span>Reservar</span></button>
@@ -207,29 +207,24 @@
         </footer>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
       roomId: null,
       selected: null,
-      options: [
-        { value: "A", text: "Option A (from options prop)" },
-        { value: "B", text: "Option B (from options prop)" },
-      ],
     };
   },
   methods: {
-    ...mapActions(['getShedule', 'getRooms']),
+    ...mapActions(["getShedule", "getRooms"]),
     pushRoomId(payload) {
       const selectedRoom = payload;
       this.roomId = selectedRoom;
-      this.getShedule()
+      this.getShedule();
       this.goToReserve();
     },
     goToReserve() {
@@ -237,27 +232,21 @@ export default {
       this.$router.push("/Reservar");
       this.roomId = null;
     },
-    // rr(){
-    //   let chegouRooms = this.$store.getters.passRooms
-    //   return this.cc(chegouRooms)
-    // }
+    killSession() {
+      localStorage.removeItem["tokenv2"] = "";
+      this.$router.push("/");
+    },
   },
-  
+
   computed: {
-    ...mapGetters({ roominfosArrival: 'passRooms'}),
-   roomInfos(){
-     return this.roominfosArrival
-   }
-    
+    ...mapGetters({ roominfosArrival: "passRooms" }),
+    roomInfos() {
+      return this.roominfosArrival;
+    },
   },
   created() {
-    this.getRooms()
-    // setTimeout(() => {
-    //   this.rr()
-    
-
-    // }, 2000)
-  }
+    this.getRooms();
+  },
 };
 </script>
 

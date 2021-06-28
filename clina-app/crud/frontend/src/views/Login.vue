@@ -19,11 +19,12 @@
             v-model="loginData.email"
           />
           <p class="loginPassword">Senha</p>
-          <input 
-              type="password" 
-              class="form-control password" 
-              id="2"
-              v-model="loginData.password"/>
+          <input
+            type="password"
+            class="form-control password"
+            id="2"
+            v-model="loginData.password"
+          />
           <button class="btnEnter" @click="goToMain">
             <span>Entrar</span>
           </button>
@@ -42,7 +43,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Main",
   data() {
@@ -57,12 +58,17 @@ export default {
     ...mapActions(["loginAuth"]),
 
     goToMain() {
-      this.loginAuth((this.loginData));
-      console.log('foi chamado')
-      setTimeout(() =>{
+      this.loginAuth(this.loginData);
+      this.roomInfos;
+      setTimeout(() => {
         this.$router.push("main");
-      }, 150)
-      
+      }, 500);
+    },
+  },
+  computed: {
+    ...mapGetters(['roominfosArrival: "passRooms",']),
+    roomInfos() {
+      return this.roominfosArrival;
     },
   },
 };

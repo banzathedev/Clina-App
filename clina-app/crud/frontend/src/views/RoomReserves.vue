@@ -30,7 +30,7 @@
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Caio</a></li>
           <li><a class="dropdown-item" href="#">Alterar senha</a></li>
-          <li><a class="dropdown-item" href="#">Sair</a></li>
+          <li><a class="dropdown-item" @click="killSession">Sair</a></li>
         </ul>
       </div>
     </div>
@@ -377,7 +377,7 @@ export default {
       conditional: false,
       selected: null,
       roomPrice: 0,
-      recivedPeriod: "Todos", //TODO receber Valor vindo da main
+      recivedPeriod: "Todos",
     };
   },
   methods: {
@@ -388,6 +388,10 @@ export default {
       let roomPriceFinal = priceInit + roomPriceInit;
       return (this.roomPrice = roomPriceFinal);
     },
+    killSession(){
+     localStorage.removeItem['tokenv2'] = '';
+     this.$router.push('/')
+   }
   },
   computed: {
     ...mapGetters({
