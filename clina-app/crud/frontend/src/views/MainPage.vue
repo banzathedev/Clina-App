@@ -253,6 +253,7 @@ export default {
 <style lang="scss" scoped>
 //Main Card Styles
 //header
+
 .fake-nav {
   margin-left: 277px;
   width: 1366px;
