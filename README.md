@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-Apos Baixar o projeto ou clona-lo entre na pasta crud onde voce ira se deparar com outras duas pastas e em seu terminal(cmd ou outro de sua escolha) insira o comando em ambas as pastas  -> npm install
+Apos Baixar o projeto ou clona-lo entre na pasta claina-app e depois na pasta crud onde voce ira se deparar com outras duas pastas e em seu terminal(cmd ou outro de sua escolha) insira o comando em ambas as pastas  -> npm install
 
 p.s lembrando que é necessario ter instalando o node.js para utilizar os comando npm. 
 ```
